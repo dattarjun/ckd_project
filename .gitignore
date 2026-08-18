@@ -1,0 +1,155 @@
+# ============================================================
+# CKD PROJECT - Git Ignore Rules
+# ============================================================
+
+# ------------------------------------------------------------
+# Environment variables and secrets
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# ------------------------------------------------------------
+# Python
+# ------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python packaging
+*.egg-info/
+dist/
+build/
+
+# ------------------------------------------------------------
+# FastAPI / Uvicorn / local runtime files
+# ------------------------------------------------------------
+*.log
+logs/
+
+# ------------------------------------------------------------
+# Node.js / React / Vite
+# ------------------------------------------------------------
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ------------------------------------------------------------
+# VS Code
+# ------------------------------------------------------------
+.vscode/
+*.code-workspace
+
+# ------------------------------------------------------------
+# Jupyter
+# ------------------------------------------------------------
+.ipynb_checkpoints/
+
+# ------------------------------------------------------------
+# Operating system files
+# ------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ------------------------------------------------------------
+# Local databases / database dumps
+# ------------------------------------------------------------
+*.db
+*.sqlite
+*.sqlite3
+*.bak
+*.dump
+*.sql.gz
+
+# NOTE:
+# Do NOT ignore all .sql files.
+# We may later keep database schema/migration SQL in Git.
+# ------------------------------------------------------------
+
+# ------------------------------------------------------------
+# MySQL local/export files
+# ------------------------------------------------------------
+mysql-data/
+mysql-backup/
+database-backups/
+
+# ------------------------------------------------------------
+# Machine Learning generated artifacts
+# ------------------------------------------------------------
+models/trained/*
+!models/trained/.gitkeep
+
+*.pkl
+*.pickle
+*.joblib
+*.h5
+*.keras
+*.onnx
+*.pt
+*.pth
+
+# ------------------------------------------------------------
+# Datasets
+# ------------------------------------------------------------
+
+# Do not commit raw/private/large datasets
+data/raw/*
+!data/raw/.gitkeep
+
+# Processed datasets may also contain sensitive or generated data
+data/processed/*
+!data/processed/.gitkeep
+
+# ------------------------------------------------------------
+# RAG knowledge base
+# ------------------------------------------------------------
+
+# Original clinical documents / PDFs
+rag/knowledge_base/raw/*
+!rag/knowledge_base/raw/.gitkeep
+
+# Generated/processed RAG documents
+rag/knowledge_base/processed/*
+!rag/knowledge_base/processed/.gitkeep
+
+# RAG/vector database runtime data
+rag/chroma/
+chroma/
+chroma_db/
+.chroma/
+
+# ------------------------------------------------------------
+# Temporary files
+# ------------------------------------------------------------
+tmp/
+temp/
+*.tmp
+*.temp
+
+# ------------------------------------------------------------
+# Coverage / testing generated files
+# ------------------------------------------------------------
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ------------------------------------------------------------
+# Miscellaneous generated files
+# ------------------------------------------------------------
+*.bak
+*.swp
+*.swo
+
+
+# ------------------------------------------------------------
+# Author : Sushant Bhanudas Shekhar | 18 August 2026 | 
+# Project Title : Agentic AI–Driven Early CKD Progression Prediction and Clinical Decision Support using RAG
+# ------------------------------------------------------------
